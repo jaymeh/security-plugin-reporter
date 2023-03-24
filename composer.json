@@ -1,0 +1,48 @@
+{
+    "name": "jaymeh/craft-security-header-reporter",
+    "description": "Handles reporting of security headers and pushes them back into the CMS.",
+    "type": "craft-plugin",
+    "license": "proprietary",
+    "support": {
+        "email": "contact@jaymeh.co.uk",
+        "issues": "https://github.com/jaymeh/security-plugin-reporter/issues?state=open",
+        "source": "https://github.com/jaymeh/security-plugin-reporter",
+        "docs": "https://github.com/jaymeh/security-plugin-reporter",
+        "rss": "https://github.com/jaymeh/security-plugin-reporter/releases.atom"
+    },
+    "require": {
+        "php": ">=8.0.2",
+        "craftcms/cms": "^4.4.5"
+    },
+    "require-dev": {
+        "craftcms/ecs": "dev-main",
+        "craftcms/phpstan": "dev-main"
+    },
+    "autoload": {
+        "psr-4": {
+            "jaymeh\\craftsecurityheaderreporter\\": "src/"
+        }
+    },
+    "extra": {
+        "handle": "security-header-reporter",
+        "name": "security-header-reporter",
+        "developer": "jaymeh",
+        "documentationUrl": "https://github.com/jaymeh/security-plugin-reporter"
+    },
+    "scripts": {
+        "check-cs": "ecs check --ansi",
+        "fix-cs": "ecs check --ansi --fix",
+        "phpstan": "phpstan --memory-limit=1G"
+    },
+    "config": {
+        "sort-packages": true,
+        "platform": {
+            "php": "8.0.2"
+        },
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "craftcms/plugin-installer": true
+        }
+    }
+}
+
